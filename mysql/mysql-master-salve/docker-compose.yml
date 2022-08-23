@@ -1,0 +1,45 @@
+version: '3.3'
+services:
+  db1:
+    container_name: "db1"
+    restart: always
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: homestead
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      TZ: 'Asia/Tokyo'
+    ports:
+      - "33061:3306"
+    command: 'mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
+    volumes:
+      - db-store1:/var/lib/mysql
+      - ./db1/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./db1/sql:/docker-entrypoint-initdb.d
+      - ./db1/DDL:/etc/ddl
+      - ./logs/db1:/var/log/mysql
+
+  db2:
+    container_name: "db2"
+    restart: always
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: homestead
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      TZ: 'Asia/Tokyo'
+    ports:
+      - "33062:3306"
+    command: 'mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
+    volumes:
+      - db-store2:/var/lib/mysql
+      - ./db2/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./db2/sql:/docker-entrypoint-initdb.d
+      - ./db2/DDL:/etc/ddl
+      - ./logs/db2:/var/log/mysql
+
+volumes:
+  db-store1:
+  db-store2:
