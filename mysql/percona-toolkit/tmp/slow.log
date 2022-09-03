@@ -46,3 +46,43 @@ Time                 Id Command    Argument
 /usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
 Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
 Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2022-09-03T07:08:56.434959Z
+# User@Host: root[root] @  [172.24.0.1]  Id:    20
+# Query_time: 6.070070  Lock_time: 6.069110 Rows_sent: 1  Rows_examined: 1
+use sakila;
+SET timestamp=1662188930;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT *
+FROM actor
+WHERE actor_id = 1
+FOR UPDATE;
+# Time: 2022-09-03T07:47:58.363296Z
+# User@Host: root[root] @  [172.24.0.1]  Id:    18
+# Query_time: 50.088699  Lock_time: 50.089073 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1662191228;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ UPDATE actor SET first_name = 'test' WHERE actor_id = 1;
+# Time: 2022-09-03T07:50:14.675333Z
+# User@Host: root[root] @  [172.24.0.1]  Id:    18
+# Query_time: 34.606489  Lock_time: 34.602168 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1662191380;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ UPDATE actor SET first_name = 'test' WHERE actor_id = 1;
