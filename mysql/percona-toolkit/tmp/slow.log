@@ -40,3 +40,9 @@ SET timestamp=1662178153;
 # Query_time: 10.001497  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 1
 SET timestamp=1662178163;
 /* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT SLEEP(10);
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
