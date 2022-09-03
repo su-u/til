@@ -1,0 +1,28 @@
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2022-09-03T03:21:47.989743Z
+# User@Host: root[root] @  [172.19.0.1]  Id:     8
+# Query_time: 3.002827  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 1
+use sakila;
+SET timestamp=1662175304;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT SLEEP(3);
+# Time: 2022-09-03T03:24:31.903216Z
+# User@Host: root[root] @  [172.19.0.1]  Id:     8
+# Query_time: 3.003467  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1662175468;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT SLEEP(3);
+# Time: 2022-09-03T03:32:15.308461Z
+# User@Host: root[root] @  [172.19.0.1]  Id:     8
+# Query_time: 9.216086  Lock_time: 0.000047 Rows_sent: 0  Rows_examined: 8
+SET timestamp=1662175926;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT * FROM address
+WHERE address2  IS NOT NULL
+AND address_id IN (SLEEP(3));
+# Time: 2022-09-03T03:34:26.864833Z
+# User@Host: root[root] @  [172.19.0.1]  Id:    10
+# Query_time: 126.024959  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 46
+SET timestamp=1662175940;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT * FROM address
+WHERE address2  IS NOT NULL
+AND address_id = (SLEEP(3));

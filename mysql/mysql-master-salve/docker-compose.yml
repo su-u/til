@@ -18,7 +18,7 @@ services:
       - ./db1/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./db1/sql:/docker-entrypoint-initdb.d
       - ./db1/DDL:/etc/ddl
-      - ./logs/db1:/var/log/mysql
+      - ./logs/db1:/var/tmp/mysql
 
   db2:
     container_name: "db2"
@@ -38,7 +38,7 @@ services:
       - ./db2/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./db2/sql:/docker-entrypoint-initdb.d
       - ./db2/DDL:/etc/ddl
-      - ./logs/db2:/var/log/mysql
+      - ./logs/db2:/var/tmp/mysql
 
 volumes:
   db-store1:
