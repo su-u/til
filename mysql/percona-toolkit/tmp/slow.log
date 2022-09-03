@@ -26,3 +26,17 @@ SET timestamp=1662175940;
 /* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT * FROM address
 WHERE address2  IS NOT NULL
 AND address_id = (SLEEP(3));
+/usr/sbin/mysqld, Version: 8.0.30 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2022-09-03T04:09:16.160865Z
+# User@Host: root[root] @  [172.21.0.1]  Id:     8
+# Query_time: 3.004335  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 1
+use sakila;
+SET timestamp=1662178153;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT SLEEP(3);
+# Time: 2022-09-03T04:09:33.172744Z
+# User@Host: root[root] @  [172.21.0.1]  Id:     8
+# Query_time: 10.001497  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1662178163;
+/* ApplicationName=IntelliJ IDEA 2022.2.1 */ SELECT SLEEP(10);

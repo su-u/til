@@ -1,7 +1,10 @@
-version: '3.3'
+version: '3'
 services:
-  percona-tookkit:
-    image: perconalab/percona-toolkit
+  toolkit:
+    build: percona-toolkit
+    tty: true
+    volumes:
+      - ./tmp:/tmp
   mysql:
     image: mysql:latest
     container_name: mysql_container
