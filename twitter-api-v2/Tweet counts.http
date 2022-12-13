@@ -1,0 +1,4 @@
+### Basic authorization.
+GET https://api.twitter.com/2/tweets/counts/recent?query=from:suuuex
+Authorization: Bearer {{BEARER_TOKEN}}
+Accept: application/json

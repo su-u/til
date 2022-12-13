@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "end": "2022-12-13T15:00:00.000Z",
+      "start": "2022-12-13T14:00:00.000Z",
+      "tweet_count": 10798113
+    },
+    {
+      "end": "2022-12-13T15:13:58.000Z",
+      "start": "2022-12-13T15:00:00.000Z",
+      "tweet_count": 2653654
+    }
+  ],
+  "meta": {
+    "total_tweet_count": 13451767,
+    "next_token": "1jzu9lk96azp0b3x7888hrpw8n5fhedkydhinktozrlp"
+  }
+}
