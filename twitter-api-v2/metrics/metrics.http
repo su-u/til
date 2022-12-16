@@ -1,0 +1,23 @@
+###
+
+# curl 'https://api.twitter.com/2/tweets?ids=1204084171334832128&tweet.fields=public_metrics&expansions=attachments.media_keys&media.fields=public_metrics' --header 'Authorization: Bearer $BEARER_TOKEN'
+GET https://api.twitter.com/2/tweets?ids=1602944219135385601&tweet.fields=public_metrics
+Authorization: Bearer {{BEARER_TOKEN}}
+###
+
+# curl 'https://api.twitter.com/2/tweets?ids=1204084171334832128&tweet.fields=public_metrics&expansions=attachments.media_keys&media.fields=public_metrics' --header 'Authorization: Bearer $BEARER_TOKEN'
+GET https://api.twitter.com/2/tweets?ids=1204084171334832128&tweet.fields=public_metrics&expansions=attachments.media_keys&media.fields=public_metrics
+Authorization: Bearer {{USER_BEARER_TOKEN}}
+
+###
+
+
+# curl 'https://api.twitter.com/2/tweets/1204084171334832128?tweet.fields=non_public_metrics,organic_metrics&media.fields=non_public_metrics,organic_metrics&expansions=attachments.media_keys'
+#--header 'authorization: OAuth oauth_consumer_key="CONSUMER_API_KEY", oauth_nonce="OAUTH_NONCE", oauth_signature="OAUTH_SIGNATURE", oauth_signature_method="HMAC-SHA1", oauth_timestamp="OAUTH_TIMESTAMP", oauth_token="ACCESS_TOKEN", oauth_version="1.0"'
+GET https://api.twitter.com/2/tweets/1598312681689292802?tweet.fields=non_public_metrics,organic_metrics&media.fields=non_public_metrics,organic_metrics&expansions=attachments.media_keys
+authorization: Bearer {{USER_BEARER_TOKEN}}
+
+###
+
+
+
