@@ -1,0 +1,20 @@
+
+
+GET https://api.twitter.com/2/users/2178472297/tweets?tweet.fields=public_metrics,created_at&media.fields=duration_ms,public_metrics,organic_metrics,promoted_metrics,alt_text&expansions=author_id,attachments.media_keys&user.fields=created_at&max_results=5
+Authorization: Bearer {{BEARER_TOKEN}}
+
+###
+GET https://api.twitter.com/2/users/567491918/timelines/reverse_chronological
+Authorization: Bearer {{BEARER_TOKEN}}
+
+###
+GET https://api.twitter.com/2/users/2178472297/tweets?exclude=retweets&expansions=author_id&tweet.fields=author_id,public_metrics,created_at,text&user.fields=created_at,description,id,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld&max_results=5
+Authorization: Bearer {{BEARER_TOKEN}}
+
+###
+GET https://api.twitter.com/2/users/2178472297/tweets?tweet.fields=text&max_results=5
+Authorization: Bearer {{BEARER_TOKEN}}
+
+###
+GET https://api.twitter.com/2/users/2178472297/tweets?tweet.fields=public_metrics,text&expansions=author_id&user.fields=username&max_results=5
+Authorization: Bearer {{BEARER_TOKEN}}
