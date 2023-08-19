@@ -8,12 +8,8 @@ import (
 )
 
 type Question struct {
-	ID         int    `gorm:"primary_key"`
-	Year       int    `gorm:"not null"`
-	Genre      string `gorm:"not null"`
-	Question   string `gorm:"not null"`
-	Answer     string `gorm:"not null"`
-	Commentary string `gorm:"not null"`
+	ID   int `gorm:"primary_key"`
+	Year int `gorm:"not null"`
 }
 
 func GetAll() []Question {

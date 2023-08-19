@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/sakila</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="questions" uuid="0b39efdf-788f-4ea9-b27d-1a5fdc1e2b13">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/go/rest_api_sample/data/questions.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
