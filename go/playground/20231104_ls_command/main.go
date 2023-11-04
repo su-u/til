@@ -8,8 +8,11 @@ import (
 func main() {
 	if len(os.Args) == 1 {
 		ls()
-	} else {
+	} else if len(os.Args) == 2 {
 		lsWithDir(os.Args[1])
+	} else {
+		fmt.Println("Usage: ls [dirname]")
+		os.Exit(1)
 	}
 }
 
@@ -19,7 +22,9 @@ func ls() {
 
 func lsWithDir(dirname string) {
 	if entries, err := os.ReadDir(dirname); err != nil {
-		panic(err)
+		err = fmt.Errorf("func ReadDir error: %v", err)
+		fmt.Println(err)
+		os.Exit(1)
 	} else {
 		output(entries)
 	}
