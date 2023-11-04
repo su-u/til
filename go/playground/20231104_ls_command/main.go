@@ -18,12 +18,11 @@ func ls() {
 }
 
 func lsWithDir(dirname string) {
-	dirEntries, err := os.ReadDir(dirname)
-	if err != nil {
+	if entries, err := os.ReadDir(dirname); err != nil {
 		panic(err)
+	} else {
+		output(entries)
 	}
-
-	output(dirEntries)
 }
 
 func output(entries []os.DirEntry) {
