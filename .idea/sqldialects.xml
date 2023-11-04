@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/go/playground/20230821_rest_api_blog/model/db.go" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/mysql/percona-toolkit/workspace/A.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/mysql/percona-toolkit/workspace/console.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/mysql/playground/20220903_percona-toolkit/workspace/A.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/mysql/playground/20220903_percona-toolkit/workspace/console.sql" dialect="MySQL" />
   </component>
 </project>
