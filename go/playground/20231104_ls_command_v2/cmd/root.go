@@ -1,22 +1,15 @@
 package cmd
 
 import (
-	"fmt"
 	"github.com/spf13/cobra"
+	"github.com/su-u/ls_command_v2/ls"
 )
 
 var rootCmd = &cobra.Command{
-	Use:  "example",
+	Use:  "ls",
 	Long: "",
-	RunE: func(cmd *cobra.Command, args []string) error {
-		t, err := cmd.Flags().GetBool("toggle")
-		if err != nil {
-			return err
-		}
-
-		fmt.Printf("toggle: %t", t)
-		return nil
-	},
+	Args: argsValid(),
+	RunE: runE(),
 }
 
 func Execute() error {
@@ -25,5 +18,25 @@ func Execute() error {
 }
 
 func init() {
-	rootCmd.Flags().BoolP("toggle", "t", false, "フラグの説明")
+	rootCmd.Flags().StringP("", "d", ".", "ディレクトリ")
+}
+
+func argsValid() func(cmd *cobra.Command, args []string) error {
+	return func(cmd *cobra.Command, args []string) error {
+		if err := cobra.MinimumNArgs(1)(cmd, args); err != nil {
+			return err
+		}
+		return nil
+	}
+}
+
+func runE() func(cmd *cobra.Command, args []string) error {
+	return func(cmd *cobra.Command, args []string) error {
+		dirname, err := cmd.Flags().GetString("")
+		ls.WithDir(dirname)
+		if err != nil {
+			return err
+		}
+		return nil
+	}
 }
