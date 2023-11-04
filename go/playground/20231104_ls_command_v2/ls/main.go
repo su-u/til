@@ -5,14 +5,14 @@ import (
 	"os"
 )
 
-func WithDir(dirname string) {
-	if entries, err := os.ReadDir(dirname); err != nil {
-		err = fmt.Errorf("func ReadDir error: %v", err)
-		fmt.Println(err)
-		os.Exit(1)
-	} else {
-		output(entries)
+func WithDir(dirname string) error {
+	entries, err := os.ReadDir(dirname)
+	if err != nil {
+		return err
 	}
+
+	output(entries)
+	return nil
 }
 
 func output(entries []os.DirEntry) {

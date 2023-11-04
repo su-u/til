@@ -1,11 +1,12 @@
 package cmd
 
 import (
+	"errors"
 	"github.com/spf13/cobra"
 	"github.com/su-u/ls_command_v2/ls"
 )
 
-var rootCmd = &cobra.Command{
+var lsCmd = &cobra.Command{
 	Use:  "ls",
 	Long: "",
 	Args: argsValid(),
@@ -13,18 +14,17 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() error {
-	err := rootCmd.Execute()
+	err := lsCmd.Execute()
 	return err
 }
 
 func init() {
-	rootCmd.Flags().StringP("", "d", ".", "ディレクトリ")
 }
 
 func argsValid() func(cmd *cobra.Command, args []string) error {
 	return func(cmd *cobra.Command, args []string) error {
-		if err := cobra.MinimumNArgs(1)(cmd, args); err != nil {
-			return err
+		if len(args) >= 2 {
+			return errors.New("2つ以上の引数は指定できません")
 		}
 		return nil
 	}
@@ -32,8 +32,13 @@ func argsValid() func(cmd *cobra.Command, args []string) error {
 
 func runE() func(cmd *cobra.Command, args []string) error {
 	return func(cmd *cobra.Command, args []string) error {
-		dirname, err := cmd.Flags().GetString("")
-		ls.WithDir(dirname)
+		//fmt.Printf("%s\n", strings.Join(args, ""))
+
+		var dirname = "."
+		if len(args) >= 1 {
+			dirname = args[0]
+		}
+		err := ls.WithDir(dirname)
 		if err != nil {
 			return err
 		}
