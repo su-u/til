@@ -1,0 +1,27 @@
+{
+  "name": "slack-copy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "lint": "next lint",
+    "lint-fix": "next lint --fix",
+    "format": "prettier --write **/*.{tsx,ts}",
+    "release-major": "yarn version --major",
+    "release-minor": "yarn version --minor",
+    "release-patch": "yarn version --patch"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.3",
+    "next": "^14.1.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.48",
+    "typescript": "5.3.3"
+  }
+}
