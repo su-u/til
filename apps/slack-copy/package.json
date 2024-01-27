@@ -13,10 +13,14 @@
     "format": "prettier --write **/*.{tsx,ts}",
     "release-major": "yarn version --major",
     "release-minor": "yarn version --minor",
-    "release-patch": "yarn version --patch"
+    "release-patch": "yarn version --patch",
+    "update-schema-types": "supabase gen types typescript --local > src/schema.ts"
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.18.4",
+    "@ant-design/nextjs-registry": "^1.0.0",
     "@supabase/supabase-js": "^2.39.3",
+    "antd": "^5.13.2",
     "next": "^14.1.0",
     "react": "^18.2.0"
   },
